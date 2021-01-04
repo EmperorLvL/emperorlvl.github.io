@@ -6,7 +6,7 @@
         var params = window.location.search.slice(1).split("&");
         $.get("https://emperorlvl.github.io/db.txt", function(contents) {
             var hasString = contents.includes(params[0]);
-            if (hasString === 'true') {
+            if (hasString) {
                 document.getElementById("status").innerHTML = "Valid";
             }
         })
