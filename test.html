@@ -2,12 +2,18 @@
 <html>
     <p id="status"></p>
     <script>
-        var IDs = [ '123456', '654321' ];
+        //var IDs = [ '123456', '654321' ];
         var params = window.location.search.slice(1).split("&");
-        for (var i = 0; i < IDs.length; i++) {
+        $.get("https://emperorlvl.github.io/db.txt", function(contents) {
+            var hasString = contents.includes(params[0]);
+            if (hasString === 'true') {
+                document.getElementById("status").innerHTML = "Valid";
+            }
+        })
+        /*for (var i = 0; i < IDs.length; i++) {
             if (Keys[i].match(params[0])) {
                 document.getElementById("status").innerHTML = "Valid";
             }
-        }
+        }*/
     </script>
 </html>
