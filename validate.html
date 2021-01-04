@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <p id="status"></p>
+    <script>
+        var IDs = [ '123456', '654321' ];
+        var params = window.location.search.slice(1).split("&");
+        for (var i = 0; i < IDs.length; i++) {
+            if (IDs[i].match(params[0])) {
+                document.getElementById("status").innerHTML = "Valid";
+            }
+        }
+    </script>
+</html>
