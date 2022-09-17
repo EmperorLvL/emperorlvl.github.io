@@ -3,7 +3,7 @@ html, body { height: 100% }
 body {
   display: flex;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: #363636;
 }
 
 .container {
