@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' https://cdnjs.cloudflare.com/ 'unsafe-inline' 'unsafe-eval';  media-src *">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdnjs.cloudflare.com/ 'unsafe-inline' 'unsafe-eval';">
         <link rel="stylesheet" href="style.css">
         <title>FoffyCoffee</title>
     </head>
     <body>
         <canvas class="background"></canvas>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+        <script>        
+            window.onload = function() {
+                Particles.init({
+                selector: '.background',
+                color: '#75A5B7',
+                maxParticles: 130,
+                connectParticles: true,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    options: {
+                        maxParticles: 80
+                    }
+                    }, {
+                    breakpoint: 375,
+                    options: {
+                        maxParticles: 50
+                    }
+                    }
+                ]
+                });
+            };
+        </script>
     </body>
 </html>
